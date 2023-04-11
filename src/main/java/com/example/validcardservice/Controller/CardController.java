@@ -13,8 +13,8 @@ public class CardController {
     @Autowired
     private CardService service;
 
-    @PostMapping("/card/{id}")
-    public String validCard(@PathVariable Long id, @RequestBody Card card){
+    @PostMapping("/card")
+    public String validCard(@RequestBody Card card){
         return service.validCard(card);
     }
 }
